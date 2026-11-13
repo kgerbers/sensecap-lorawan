@@ -110,6 +110,30 @@ class S2105(S2104):
         return self._number(4108)
 
 
+class S2108(S2104):
+    """Soil temperature, moisture, bulk EC, and pore-water EC."""
+
+    identifiers = {
+        "chirpstack": (VENDOR_ID, "54a702ab-6b70-4de2-bc06-858d75d3c3d3"),
+    }
+    _ranges = {
+        4102: (-40, 80),
+        4103: (0, 100),
+        4108: (0, 20),
+        4204: (0, 32),
+    }
+
+    @property
+    def bulk_ec(self) -> float | None:
+        """Bulk soil electrical conductivity in mS/cm."""
+        return self._number(4108)
+
+    @property
+    def pore_ec(self) -> float | None:
+        """Soil pore-water electrical conductivity in mS/cm."""
+        return self._number(4204)
+
+
 class S2106(SenseCapDevice):
     """Temperature and pH."""
 

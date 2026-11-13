@@ -2,6 +2,10 @@
   "chirpstack_commit": "6123d132f013cb1615c26a8b8bccbaa4b14f72cc",
   "tts_commit": "7a0cb2e307fe434e88a31857906fb76cbdc99620",
   "chirpstack": {
+    "sensecap-s2108.toml": {
+      "id": "54a702ab-6b70-4de2-bc06-858d75d3c3d3",
+      "name": "SenseCAP S2108"
+    },
     "sensecap-s2120.toml": {
       "id": "ba6c2e5d-d894-41d1-a5c1-5e8f4a7d3826",
       "name": "SenseCAP S2120"

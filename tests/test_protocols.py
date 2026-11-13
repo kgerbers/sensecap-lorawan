@@ -19,6 +19,7 @@ from sensecap_lorawan import (
     S2105,
     S2106,
     S2107,
+    S2108,
     S2120,
     T1000,
     T1000E,
@@ -83,6 +84,19 @@ def records(*values):
             S2105,
             records((1, 4102, 20000), (1, 4103, 50000), (1, 4108, 2500)),
             {"soil_temperature": 20, "soil_moisture": 50, "conductivity": 2.5},
+        ),
+        (
+            S2108,
+            bytes.fromhex(
+                "010610f244000001071000000000010c1000000000016d10a2030000"
+                "016c1000000000f0f3"
+            ),
+            {
+                "soil_temperature": 17.65,
+                "soil_moisture": 0,
+                "bulk_ec": 0,
+                "pore_ec": 0,
+            },
         ),
         (
             S2106,

@@ -11,6 +11,7 @@ Read SenseCAP sensors through ChirpStack or The Things Stack using
 | S2103 | Air temperature, humidity, CO₂ | ChirpStack, TTS |
 | S2104 | Soil temperature, moisture | ChirpStack, TTS |
 | S2105 | Soil temperature, moisture, conductivity | ChirpStack, TTS |
+| S2108 | Soil temperature, moisture, bulk EC, pore-water EC | ChirpStack |
 | S2106 | Temperature, pH | ChirpStack |
 | S2107 | Three temperature probes, including buffered readings | ChirpStack |
 | S2120 | Temperature, humidity, light, UV, wind, pressure, rainfall | ChirpStack, TTS |
