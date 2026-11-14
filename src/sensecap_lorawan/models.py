@@ -111,7 +111,7 @@ class S2105(S2104):
 
 
 class S2108(S2104):
-    """Soil temperature, moisture, bulk EC, and pore-water EC."""
+    """Soil temperature, moisture, EC, pore-water EC, and epsilon."""
 
     identifiers = {
         "chirpstack": (VENDOR_ID, "54a702ab-6b70-4de2-bc06-858d75d3c3d3"),
@@ -121,6 +121,7 @@ class S2108(S2104):
         4103: (0, 100),
         4108: (0, 20),
         4204: (0, 32),
+        4205: (0, 82),
     }
 
     @property
@@ -132,6 +133,11 @@ class S2108(S2104):
     def pore_ec(self) -> float | None:
         """Soil pore-water electrical conductivity in mS/cm."""
         return self._number(4204)
+
+    @property
+    def epsilon(self) -> float | None:
+        """Soil dielectric constant."""
+        return self._number(4205)
 
 
 class S2106(SenseCapDevice):

@@ -8,7 +8,7 @@ from lorawan_connection import DeviceDescriptor, UplinkEvent
 from sensecap_lorawan import S2108
 
 
-def test_real_payload_keeps_epsilon_internal_only() -> None:
+def test_real_payload_decodes_epsilon() -> None:
     descriptor = DeviceDescriptor(
         network_id="network",
         dev_eui="2cf7f1c054300198",
@@ -38,7 +38,7 @@ def test_real_payload_keeps_epsilon_internal_only() -> None:
     assert device.soil_moisture == 0
     assert device.bulk_ec == 0
     assert device.pore_ec == 0
-    assert device.measurement_value(4205) == 0.93
+    assert device.epsilon == 0.93
     listener.assert_called_once_with()
 
 
